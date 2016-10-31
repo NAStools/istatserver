@@ -1,0 +1,47 @@
+.Dd 2009-05-17
+.Dt istatserver 1
+.Os
+.Sh NAME
+.Nm istatserver
+.Nd system monitoring daemon
+.Sh SYNOPSIS
+.Nm
+.Op Fl c Ar config
+.Op Fl a Ar address
+.Op Fl p Ar port
+.Op Fl d
+
+.Sh DESCRIPTION
+.Nm
+is a system monitoring daemon that collects and stores performance monitoring data.
+You can then use iStat for iOS and iStat for macOS to remotely monitor your computer.
+
+.Sh OPTIONS
+.Bl -tag -width -indent-three
+.It Fl v
+Print version number
+.It Fl d
+Run in the process in background
+.It Fl a Ar address
+Listen for network connections on this address
+.It Fl p Ar port
+Listen for network connections on this port
+.It Fl u Ar user
+User to run daemon as
+.It Fl g Ar group
+Group to run daemon as
+.It Fl -pid Ar path
+Custom pid file location
+.It Fl -clear-sessions
+Reset list of authorized devices.
+.It Fl -verify
+Verify sqlite history database.
+.El
+.Pp
+.Sh FILES
+/usr/local/etc/istatserver/istatserver.conf
+.Pp
+Configuration for passcode, server port and more.
+.El
+.Sh SEE ALSO
+.Xr istatserver.conf 5
