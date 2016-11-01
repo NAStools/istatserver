@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+    if ! getent group nastools-istatserver >/dev/null 2>&1; then
+        rn_nml -a group:nastools-istatserver
+    fi
+    if ! getent passwd nastools-istatserver >/dev/null 2>&1; then
+        rn_nml -a user:nastools-istatserver:nastools-istatserver
+    fi
+    chown -R nastools-istatserver:nastools-istatserver /apps/nastools-istatserver
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

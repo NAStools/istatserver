@@ -1,0 +1,3 @@
+debian/readynas/config.xml apps/nastools-istatserver
+debian/readynas/fvapp-nastools-istatserver.service apps/nastools-istatserver
+debian/readynas/logo.png apps/nastools-istatserver

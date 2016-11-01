@@ -1,0 +1,18 @@
+Source: istatserver
+Section: unknown
+Priority: optional
+Maintainer: NAStools <dev@nas.tools>
+Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, libxml2-dev,
+               libssl-dev, libsqlite3-dev, libsensors4-dev, libavahi-common-dev,
+               libavahi-client-dev
+Standards-Version: 3.9.5
+Homepage: https://github.com/nastools/istatserver
+Vcs-Git: git://github.com/nastools/istatserver.git
+Vcs-Browser: https://github.com/nastools/istatserver
+
+Package: nastools-istatserver
+Architecture: armel amd64
+Depends: readynasos (>= 6.6.0), ${shlibs:Depends}, ${misc:Depends}
+Description: iStat is a highly detailed remote monitoring app
+ iStat Server for Linux transmits your computer or server’s vital statistics to
+ iStat 3 for iOS or iStat 3 for Mac.

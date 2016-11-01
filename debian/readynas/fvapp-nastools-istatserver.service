@@ -1,0 +1,16 @@
+[Unit]
+Description=iStat
+After=network.target apache2.service
+
+[Service]
+Type=simple
+User=nastools-istatserver
+Group=nastools-istatserver
+RuntimeDirectory=nastools-istatserver
+ExecStart=/apps/nastools-istatserver/bin/istatserver -u nastools-istatserver \
+                                                     -g nastools-istatserver \
+                                         --pid=/run/nastools-istatserver/pid \
+                                   --socket=/run/nastools-istatserver/socket
+
+[Install]
+WantedBy=multi-user.target
