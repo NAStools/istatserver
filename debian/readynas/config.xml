@@ -1,5 +1,5 @@
 <Application resource-id="nastools-istatserver">
-  <Version></Version>
+  <Version>3.0-nt1</Version>
   <MinFirmwareVer>6.6.0</MinFirmwareVer>
   <Name>iStat NT</Name>
   <Author>NAStools</Author>
