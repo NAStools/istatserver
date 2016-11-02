@@ -11,7 +11,7 @@ Vcs-Git: git://github.com/nastools/istatserver.git
 Vcs-Browser: https://github.com/nastools/istatserver
 
 Package: nastools-istatserver
-Architecture: armel amd64
+Architecture: any
 Depends: readynasos (>= 6.6.0), ${shlibs:Depends}, ${misc:Depends}
 Description: iStat is a highly detailed remote monitoring app
  iStat Server for Linux transmits your computer or server’s vital statistics to
